@@ -38,15 +38,15 @@ namespace bimg
 		{   4,  4, 4,  8, 2, 2,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // PTC14A
 		{   2,  8, 4,  8, 2, 2,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // PTC22
 		{   4,  4, 4,  8, 2, 2,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // PTC24
-        {   4,  4, 4,  8, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATC
-        {   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATCE
-        {   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATCI
-        {   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC4x4
-        {   6,  5, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC5x5
-        {   4,  6, 6, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC6x6
-        {   4,  8, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC8x5
-        {   3,  8, 6, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC8x6
-        {   3, 10, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC10x5
+		{   4,  4, 4,  8, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATC
+		{   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATCE
+		{   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ATCI
+		{   8,  4, 4, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC4x4
+		{   6,  5, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC5x5
+		{   4,  6, 6, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC6x6
+		{   4,  8, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC8x5
+		{   3,  8, 6, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC8x6
+		{   3, 10, 5, 16, 1, 1,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // ASTC10x5
 		{   0,  0, 0,  0, 0, 0,  0, 0,  0,  0,  0,  0, uint8_t(bx::EncodingType::Count) }, // Unknown
 		{   1,  8, 1,  1, 1, 1,  0, 0,  1,  0,  0,  0, uint8_t(bx::EncodingType::Unorm) }, // R1
 		{   8,  1, 1,  1, 1, 1,  0, 0,  0,  0,  0,  8, uint8_t(bx::EncodingType::Unorm) }, // A8
@@ -128,15 +128,15 @@ namespace bimg
 		"PTC14A",     // PTC14A
 		"PTC22",      // PTC22
 		"PTC24",      // PTC24
-        "ATC",        // ATC
-        "ATCE",       // ATCE
-        "ATCI",       // ATCI
-        "ASTC4x4",    // ASTC4x4
-        "ASTC5x5",    // ASTC5x5
-        "ASTC6x6",    // ASTC6x6
-        "ASTC8x5",    // ASTC8x5
-        "ASTC8x6",    // ASTC8x6
-        "ASTC10x5",   // ASTC10x5
+		"ATC",        // ATC
+		"ATCE",       // ATCE
+		"ATCI",       // ATCI
+		"ASTC4x4",    // ASTC4x4
+		"ASTC5x5",    // ASTC5x5
+		"ASTC6x6",    // ASTC6x6
+		"ASTC8x5",    // ASTC8x5
+		"ASTC8x6",    // ASTC8x6
+		"ASTC10x5",   // ASTC10x5
 		"<unknown>",  // Unknown
 		"R1",         // R1
 		"A8",         // A8
@@ -289,7 +289,7 @@ namespace bimg
 	{
 		const ImageBlockInfo& blockInfo = getBlockInfo(_format);
 		const uint8_t  bpp         = blockInfo.bitsPerPixel;
-        const uint16_t blockSize   = blockInfo.blockSize;
+		const uint16_t blockSize   = blockInfo.blockSize;
 		const uint16_t blockWidth  = blockInfo.blockWidth;
 		const uint16_t blockHeight = blockInfo.blockHeight;
 		const uint16_t minBlockX   = blockInfo.minBlockX;
@@ -303,22 +303,22 @@ namespace bimg
 		uint32_t depth  = _depth;
 		uint32_t size   = 0;
 
-        if (_format != TextureFormat::Unknown)
-        {
-            for (uint32_t lod = 0; lod < numMips; ++lod)
-            {
-                depth  = bx::uint32_max(1, depth);
+		if (_format != TextureFormat::Unknown)
+		{
+			for (uint32_t lod = 0; lod < numMips; ++lod)
+			{
+				depth  = bx::uint32_max(1, depth);
 
-                uint16_t blocksX = bx::uint32_max(minBlockX, ((width  + blockWidth  - 1) / blockWidth ));
-                uint16_t blocksY = bx::uint32_max(minBlockY, ((height + blockHeight - 1) / blockHeight));
+				uint16_t blocksX = bx::uint32_max(minBlockX, ((width  + blockWidth  - 1) / blockWidth ));
+				uint16_t blocksY = bx::uint32_max(minBlockY, ((height + blockHeight - 1) / blockHeight));
 
-                size += blocksX * blocksY * blockSize * depth * sides;
+				size += blocksX * blocksY * blockSize * depth * sides;
 
-                width  >>= 1;
-                height >>= 1;
-                depth  >>= 1;
-            }
-        }
+				width  >>= 1;
+				height >>= 1;
+				depth  >>= 1;
+			}
+		}
 
 		size *= _numLayers;
 
@@ -338,7 +338,7 @@ namespace bimg
 		return size;
 	}
 
-    void imageSolid(void* _dst, uint32_t _width, uint32_t _height, uint32_t _solid)
+	void imageSolid(void* _dst, uint32_t _width, uint32_t _height, uint32_t _solid)
 	{
 		uint32_t* dst = (uint32_t*)_dst;
 		for (uint32_t ii = 0, num = _width*_height; ii < num; ++ii)
@@ -535,7 +535,7 @@ namespace bimg
 
 	void imageRgba32fToLinear(void* _dst, uint32_t _width, uint32_t _height, uint32_t _depth, uint32_t _srcPitch, const void* _src)
 	{
-		      uint8_t* dst = (      uint8_t*)_dst;
+			  uint8_t* dst = (      uint8_t*)_dst;
 		const uint8_t* src = (const uint8_t*)_src;
 
 		for (uint32_t zz = 0; zz < _depth; ++zz)
@@ -559,7 +559,7 @@ namespace bimg
 
 	void imageRgba32fToGamma(void* _dst, uint32_t _width, uint32_t _height, uint32_t _depth, uint32_t _srcPitch, const void* _src)
 	{
-		      uint8_t* dst = (      uint8_t*)_dst;
+			  uint8_t* dst = (      uint8_t*)_dst;
 		const uint8_t* src = (const uint8_t*)_src;
 
 		for (uint32_t zz = 0; zz < _depth; ++zz)
@@ -872,15 +872,15 @@ namespace bimg
 		{ NULL,               NULL                 }, // PTC14A
 		{ NULL,               NULL                 }, // PTC22
 		{ NULL,               NULL                 }, // PTC24
-        { NULL,               NULL                 }, // ATC
-        { NULL,               NULL                 }, // ATCE
-        { NULL,               NULL                 }, // ATCI
-        { NULL,               NULL                 }, // ASTC4x4
-        { NULL,               NULL                 }, // ASTC5x5
-        { NULL,               NULL                 }, // ASTC6x6
-        { NULL,               NULL                 }, // ASTC8x5
-        { NULL,               NULL                 }, // ASTC8x6
-        { NULL,               NULL                 }, // ASTC10x5
+		{ NULL,               NULL                 }, // ATC
+		{ NULL,               NULL                 }, // ATCE
+		{ NULL,               NULL                 }, // ATCI
+		{ NULL,               NULL                 }, // ASTC4x4
+		{ NULL,               NULL                 }, // ASTC5x5
+		{ NULL,               NULL                 }, // ASTC6x6
+		{ NULL,               NULL                 }, // ASTC8x5
+		{ NULL,               NULL                 }, // ASTC8x6
+		{ NULL,               NULL                 }, // ASTC10x5
 		{ NULL,               NULL                 }, // Unknown
 		{ NULL,               NULL                 }, // R1
 		{ bx::packR8,         bx::unpackR8         }, // A8
@@ -2186,7 +2186,7 @@ namespace bimg
 
 		const uint8_t* factors[] =
 		{
-			                s_bptcFactors[mi.indexBits[0]-2],
+							s_bptcFactors[mi.indexBits[0]-2],
 			hasIndexBits1 ? s_bptcFactors[mi.indexBits[1]-2] : factors[0],
 		};
 
@@ -2229,7 +2229,7 @@ namespace bimg
 
 				const uint8_t index[2] =
 				{
-					                (uint8_t)bit.peek(offset[0], num[0]),
+									(uint8_t)bit.peek(offset[0], num[0]),
 					hasIndexBits1 ? (uint8_t)bit.peek(offset[1], num[1]) : index[0],
 				};
 
@@ -2267,62 +2267,8 @@ namespace bimg
 		}
 	}
 
-	// BC6H, BC7
+	// ETC
 	//
-    void decodeBlockATC(uint8_t _dst[16*4], const uint8_t _src[8])
-    {
-        uint8_t colors[4*4];    // You can see from comparison with decodeBlockDXT just how little sense the ATI patent-avoiding(?) modification makes
-
-        uint32_t c0 = _src[0] | (_src[1] << 8);
-        uint32_t c1 = _src[2] | (_src[3] << 8);
-
-        if ((c0 & 0x8000) == 0)
-        {
-            colors[0] = bitRangeConvert( (c0>> 0)&0x1f, 5, 8);
-            colors[1] = bitRangeConvert( (c0>> 5)&0x1f, 5, 8);
-            colors[2] = bitRangeConvert( (c0>>10)&0x1f, 5, 8);
-
-            colors[12] = bitRangeConvert( (c1>> 0)&0x1f, 5, 8);
-            colors[13] = bitRangeConvert( (c1>> 5)&0x3f, 6, 8);
-            colors[14] = bitRangeConvert( (c1>>11)&0x1f, 5, 8);
-
-            colors[ 4] = (2 * colors[0] + colors[12]) / 3;
-            colors[ 5] = (2 * colors[1] + colors[13]) / 3;
-            colors[ 6] = (2 * colors[2] + colors[14]) / 3;
-
-            colors[ 8] = (colors[0] + 2 * colors[12]) / 3;
-            colors[ 9] = (colors[1] + 2 * colors[13]) / 3;
-            colors[10] = (colors[2] + 2 * colors[14]) / 3;
-        }
-        else
-        {
-            colors[ 0] = 0;
-            colors[ 1] = 0;
-            colors[ 2] = 0;
-
-            colors[ 8] = bitRangeConvert( (c0>> 0)&0x1f, 5, 8);
-            colors[ 9] = bitRangeConvert( (c0>> 5)&0x1f, 5, 8);
-            colors[10] = bitRangeConvert( (c0>>10)&0x1f, 5, 8);
-
-            colors[12] = bitRangeConvert( (c1>> 0)&0x1f, 5, 8);
-            colors[13] = bitRangeConvert( (c1>> 5)&0x3f, 6, 8);
-            colors[14] = bitRangeConvert( (c1>>11)&0x1f, 5, 8);
-
-            colors[ 4] = colors[ 8] - colors[12] / 4;
-            colors[ 5] = colors[ 9] - colors[13] / 4;
-            colors[ 6] = colors[10] - colors[14] / 4;
-        }
-
-        for (uint32_t ii = 0, next = 8*4; ii < 16*4; ii += 4, next += 2)
-        {
-            int idx = ( (_src[next>>3] >> (next & 7) ) & 3) * 4;
-            _dst[ii+0] = colors[idx+0];
-            _dst[ii+1] = colors[idx+1];
-            _dst[ii+2] = colors[idx+2];
-            _dst[ii+3] = colors[idx+3];
-        }
-    }
-
 	static const int32_t s_etc1Mod[8][4] =
 	{
 		{  2,   8,  -2,   -8 },
@@ -2363,8 +2309,8 @@ namespace bimg
 		//                             +-- dist
 
 		rgb[ 0] = ( (_src[0] >> 1) & 0xc)
-			    |   (_src[0]       & 0x3)
-			    ;
+				|   (_src[0]       & 0x3)
+				;
 		rgb[ 1] = _src[1] >> 4;
 		rgb[ 2] = _src[1] & 0xf;
 
@@ -2690,6 +2636,8 @@ namespace bimg
 		}
 	}
 
+	// PTC
+	//
 	static const uint8_t s_pvrtcFactors[16][4] =
 	{
 		{  4,  4,  4,  4 },
@@ -2957,6 +2905,62 @@ namespace bimg
 				mod >>= 2;
 				factorTable += 4;
 			}
+		}
+	}
+
+	// ATC
+	//
+	void decodeBlockATC(uint8_t _dst[16*4], const uint8_t _src[8])
+	{
+		uint8_t colors[4*4];    // You can see from comparison with decodeBlockDXT just how little sense the ATI patent-avoiding(?) modification makes
+
+		uint32_t c0 = _src[0] | (_src[1] << 8);
+		uint32_t c1 = _src[2] | (_src[3] << 8);
+
+		if ((c0 & 0x8000) == 0)
+		{
+			colors[0] = bitRangeConvert( (c0>> 0)&0x1f, 5, 8);
+			colors[1] = bitRangeConvert( (c0>> 5)&0x1f, 5, 8);
+			colors[2] = bitRangeConvert( (c0>>10)&0x1f, 5, 8);
+
+			colors[12] = bitRangeConvert( (c1>> 0)&0x1f, 5, 8);
+			colors[13] = bitRangeConvert( (c1>> 5)&0x3f, 6, 8);
+			colors[14] = bitRangeConvert( (c1>>11)&0x1f, 5, 8);
+
+			colors[ 4] = (2 * colors[0] + colors[12]) / 3;
+			colors[ 5] = (2 * colors[1] + colors[13]) / 3;
+			colors[ 6] = (2 * colors[2] + colors[14]) / 3;
+
+			colors[ 8] = (colors[0] + 2 * colors[12]) / 3;
+			colors[ 9] = (colors[1] + 2 * colors[13]) / 3;
+			colors[10] = (colors[2] + 2 * colors[14]) / 3;
+		}
+		else
+		{
+			colors[ 0] = 0;
+			colors[ 1] = 0;
+			colors[ 2] = 0;
+
+			colors[ 8] = bitRangeConvert( (c0>> 0)&0x1f, 5, 8);
+			colors[ 9] = bitRangeConvert( (c0>> 5)&0x1f, 5, 8);
+			colors[10] = bitRangeConvert( (c0>>10)&0x1f, 5, 8);
+
+			colors[12] = bitRangeConvert( (c1>> 0)&0x1f, 5, 8);
+			colors[13] = bitRangeConvert( (c1>> 5)&0x3f, 6, 8);
+			colors[14] = bitRangeConvert( (c1>>11)&0x1f, 5, 8);
+
+			colors[ 4] = colors[ 8] - colors[12] / 4;
+			colors[ 5] = colors[ 9] - colors[13] / 4;
+			colors[ 6] = colors[10] - colors[14] / 4;
+		}
+
+		for (uint32_t ii = 0, next = 8*4; ii < 16*4; ii += 4, next += 2)
+		{
+			int idx = ( (_src[next>>3] >> (next & 7) ) & 3) * 4;
+			_dst[ii+0] = colors[idx+0];
+			_dst[ii+1] = colors[idx+1];
+			_dst[ii+2] = colors[idx+2];
+			_dst[ii+3] = colors[idx+3];
 		}
 	}
 
@@ -3617,15 +3621,15 @@ namespace bimg
 		{ KTX_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG,         KTX_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV1_EXT,     KTX_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG,         KTX_ZERO,                         }, // PTC14A
 		{ KTX_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG,         KTX_ZERO,                                       KTX_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG,         KTX_ZERO,                         }, // PTC22
 		{ KTX_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG,         KTX_ZERO,                                       KTX_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG,         KTX_ZERO,                         }, // PTC24
-        { KTX_ATC_RGB_AMD,                              KTX_ZERO,                                       KTX_ATC_RGB_AMD,                              KTX_ZERO,                         }, // ATC
-        { KTX_ATC_RGBA_EXPLICIT_ALPHA_AMD,              KTX_ZERO,                                       KTX_ATC_RGBA_EXPLICIT_ALPHA_AMD,              KTX_ZERO,                         }, // ATCE
-        { KTX_ATC_RGBA_INTERPOLATED_ALPHA_AMD,          KTX_ZERO,                                       KTX_ATC_RGBA_INTERPOLATED_ALPHA_AMD,          KTX_ZERO,                         }, // ATCI
-        { KTX_COMPRESSED_RGBA_ASTC_4x4_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR,       KTX_COMPRESSED_RGBA_ASTC_4x4_KHR,             KTX_ZERO,                         }, // ASTC4x4
-        { KTX_COMPRESSED_RGBA_ASTC_5x5_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR,       KTX_COMPRESSED_RGBA_ASTC_5x5_KHR,             KTX_ZERO,                         }, // ASTC5x5
-        { KTX_COMPRESSED_RGBA_ASTC_6x6_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR,       KTX_COMPRESSED_RGBA_ASTC_6x6_KHR,             KTX_ZERO,                         }, // ASTC6x6
-        { KTX_COMPRESSED_RGBA_ASTC_8x5_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR,       KTX_COMPRESSED_RGBA_ASTC_8x5_KHR,             KTX_ZERO,                         }, // ASTC8x5
-        { KTX_COMPRESSED_RGBA_ASTC_8x6_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR,       KTX_COMPRESSED_RGBA_ASTC_8x6_KHR,             KTX_ZERO,                         }, // ASTC8x6
-        { KTX_COMPRESSED_RGBA_ASTC_10x5_KHR,            KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR,      KTX_COMPRESSED_RGBA_ASTC_10x5_KHR,            KTX_ZERO,                         }, // ASTC10x5
+		{ KTX_ATC_RGB_AMD,                              KTX_ZERO,                                       KTX_ATC_RGB_AMD,                              KTX_ZERO,                         }, // ATC
+		{ KTX_ATC_RGBA_EXPLICIT_ALPHA_AMD,              KTX_ZERO,                                       KTX_ATC_RGBA_EXPLICIT_ALPHA_AMD,              KTX_ZERO,                         }, // ATCE
+		{ KTX_ATC_RGBA_INTERPOLATED_ALPHA_AMD,          KTX_ZERO,                                       KTX_ATC_RGBA_INTERPOLATED_ALPHA_AMD,          KTX_ZERO,                         }, // ATCI
+		{ KTX_COMPRESSED_RGBA_ASTC_4x4_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR,       KTX_COMPRESSED_RGBA_ASTC_4x4_KHR,             KTX_ZERO,                         }, // ASTC4x4
+		{ KTX_COMPRESSED_RGBA_ASTC_5x5_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR,       KTX_COMPRESSED_RGBA_ASTC_5x5_KHR,             KTX_ZERO,                         }, // ASTC5x5
+		{ KTX_COMPRESSED_RGBA_ASTC_6x6_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR,       KTX_COMPRESSED_RGBA_ASTC_6x6_KHR,             KTX_ZERO,                         }, // ASTC6x6
+		{ KTX_COMPRESSED_RGBA_ASTC_8x5_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR,       KTX_COMPRESSED_RGBA_ASTC_8x5_KHR,             KTX_ZERO,                         }, // ASTC8x5
+		{ KTX_COMPRESSED_RGBA_ASTC_8x6_KHR,             KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR,       KTX_COMPRESSED_RGBA_ASTC_8x6_KHR,             KTX_ZERO,                         }, // ASTC8x6
+		{ KTX_COMPRESSED_RGBA_ASTC_10x5_KHR,            KTX_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR,      KTX_COMPRESSED_RGBA_ASTC_10x5_KHR,            KTX_ZERO,                         }, // ASTC10x5
 		{ KTX_ZERO,                                     KTX_ZERO,                                       KTX_ZERO,                                     KTX_ZERO,                         }, // Unknown
 		{ KTX_ZERO,                                     KTX_ZERO,                                       KTX_ZERO,                                     KTX_ZERO,                         }, // R1
 		{ KTX_ALPHA,                                    KTX_ZERO,                                       KTX_ALPHA,                                    KTX_UNSIGNED_BYTE,                }, // A8
@@ -4613,7 +4617,7 @@ namespace bimg
 				uint32_t blocksX = bx::uint32_max(minBlockX, ((width  + blockWidth  - 1) / blockWidth ));
 				uint32_t blocksY = bx::uint32_max(minBlockY, ((height + blockHeight - 1) / blockHeight));
 
-                uint32_t destSize = blocksX * blocksY * blockSize * depth;
+				uint32_t destSize = blocksX * blocksY * blockSize * depth;
 
 				BX_CHECK(sourceSize == destSize, "KTX: Image size mismatch %d (expected %d).", sourceSize, destSize);
 
