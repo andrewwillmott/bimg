@@ -4619,7 +4619,7 @@ namespace bimg
 
 				uint32_t destSize = blocksX * blocksY * blockSize * depth;
 
-				BX_CHECK(sourceSize == destSize, "KTX: Image size mismatch %d (expected %d).", sourceSize, destSize);
+				BX_CHECK(sourceSize == destSize * numSides, "KTX: Image size mismatch %d (expected %d).", sourceSize, destSize);
 
 				for (uint16_t side = 0; side < numSides; ++side)
 				{
@@ -4638,7 +4638,7 @@ namespace bimg
 						return true;
 					}
 
-					offset += sourceSize;
+					offset += destSize;
 
 					BX_CHECK(offset <= _size, "Reading past size of data buffer! (offset %d, size %d)", offset, _size);
 					BX_UNUSED(_size);
